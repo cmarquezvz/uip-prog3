@@ -1,0 +1,7 @@
+Modo Interactivo 
+
+Sirve para ejecutar una sentencia o un bloque de sentencias.
+
+Modo Normal
+
+Es donde escribimos las sentencias y funciones en un editor de texto para luego ser ejecutadas en Python
