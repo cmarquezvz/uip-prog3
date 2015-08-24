@@ -1,0 +1,37 @@
+import WipeTransition kivy.uix.screenmanager.WipeTransition
+
+ScreenManager:
+	transition: WipeTransition()
+	Screen:
+		name: 'login'
+		BoxLayout:
+			orientation: 'vertical'
+			
+			GridLayout:	
+				cols: 2
+				rows: 2
+				padding: [10, 200, 10, 90]
+				
+
+				Label:
+					text: 'Nombre: '
+				
+				TextInput:
+					size_hint_x: None
+					id: nombre
+					multiline: False
+			Button:
+				text: 'Siguiente'
+				on_press: root.current = 'final'
+
+	Screen:
+		name: 'final'
+		
+		BoxLayout:
+			orientation: 'vertical'	
+			Label:
+				text: 'Hola, ' + nombre.text
+			Button:
+				size_hint: (0.3, 0.3)
+				text: 'Volver'
+				on_press: root.current = 'inicio'
